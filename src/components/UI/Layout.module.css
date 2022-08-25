@@ -1,0 +1,11 @@
+.ant-layout-header,
+.ant-layout-footer {
+  color: #fff;
+  background: #7dbcea;
+}
+.ant-btn .ant-btn-primary
+{
+  align-items: center !important;
+  display: flex !important;
+  justify-content: center !important;
+}

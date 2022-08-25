@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+//import LayoutJS from "./components/UI/LayoutJS";
+import Header from "./components/Header/Header";
+import { Outlet } from "react-router-dom";
 
+//import LayoutAdmin from "./components/UI//User Management/LayoutAdmin";
+//import LayoutService from "./components/UI/LayoutService";
+import LayoutUserGroup from "./components/UI/User Group Management/LayoutUserGroup";
+import { Layout } from "antd";
+import Sider from "./components/Sider/Sider";
+
+const { Content } = Layout;
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Layout>
+        <Header />
+        <Layout>
+          <Sider />
+          <Content>
+            <Outlet />
+          </Content>
+        </Layout>
+      </Layout>
+    </>
   );
 }
 
