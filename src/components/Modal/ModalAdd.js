@@ -2,14 +2,14 @@ import { Modal, Col, Row } from "antd";
 import * as Yup from "yup";
 import moment from "moment";
 
-import { FastField, useFormik, FormikProvider } from "formik";
+import { FastField, useFormik, FormikProvider, Field } from "formik";
 import { useEffect } from "react";
 import InputField from "../Input/InputField";
 import InputDate from "../Input/InputDate";
 const validateUserForm = Yup.object().shape({
   name: Yup.string().trim().required("Please input your Name"),
   id: Yup.string().trim().required("Please input your ID"),
-  password: Yup.number().required("Required").nullable(),
+  password: Yup.string().required("Required"),
   suspension: Yup.string().trim().required("Please input suspension"),
   contractStart: Yup.date()
     .required("Required")
@@ -37,7 +37,7 @@ const ModalAdd = (props) => {
       name: "",
       suspension: "",
       id: "",
-      password: null,
+      password: "",
       contractStart: moment(),
       contractEnd: moment(),
     },
@@ -60,11 +60,15 @@ const ModalAdd = (props) => {
       <FormikProvider value={formik}>
         <Row>
           <Col span={11}>
-            <FastField
+            <Field
               id="name"
               label="Name"
               name="name"
               component={InputField}
+              uppercase={true}
+              onChange={(value) => {
+                formik.setFieldValue("suspension", value.toUpperCase());
+              }}
             />
           </Col>
           <Col span={2}></Col>
