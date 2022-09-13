@@ -1,4 +1,6 @@
 import { useState } from "react";
+import React from "react";
+
 import { Modal, Col, Row, Select, Button } from "antd";
 import { FastField, useFormik, FormikProvider } from "formik";
 import * as Yup from "yup";
@@ -6,10 +8,18 @@ import InputField from "../Input/InputField";
 import TagRender from "../Tags/TagRender";
 const { Option } = Select;
 const validateUserForm = Yup.object().shape({
-  name: Yup.string().trim().required("Please input your Label"),
-  staffId: Yup.string().trim().required("Please input your ID"),
-  maxUser: Yup.number().required("Required").nullable(),
-  session: Yup.number().required("Required").nullable(),
+  name: Yup.string()
+    .trim()
+    .required("Please input your Label"),
+  staffId: Yup.string()
+    .trim()
+    .required("Please input your ID"),
+  maxUser: Yup.number()
+    .required("Required")
+    .nullable(),
+  session: Yup.number()
+    .required("Required")
+    .nullable(),
   ipnumber: Yup.array().when(["."], (ipnumber) => {
     return Yup.array().of(
       Yup.string()

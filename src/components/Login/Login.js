@@ -1,5 +1,6 @@
 import { Button, Checkbox, Form, Input } from "antd";
 import * as Yup from "yup";
+import React from "react";
 
 const validateUserForm = Yup.object().shape({
   username: Yup.string().min(8, "Must be 8 characters or more"),

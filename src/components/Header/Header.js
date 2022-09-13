@@ -1,3 +1,4 @@
+import React from "react";
 import { BsCircle } from "react-icons/bs";
 import { BiUserCircle } from "react-icons/bi";
 const Header = () => {

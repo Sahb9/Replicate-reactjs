@@ -3,6 +3,7 @@ import { Input, Row, Col, Pagination, Card } from "antd";
 import { BiSearchAlt2, BiImage } from "react-icons/bi";
 import { RiErrorWarningLine } from "react-icons/ri";
 import { IoBookOutline } from "react-icons/io5";
+import React from "react";
 
 function ContentService(props) {
   return (

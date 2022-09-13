@@ -1,4 +1,6 @@
 import { Tag } from "antd";
+import React from "react";
+
 const TagRender = (props) => {
   const { label, value, closable, onClose } = props;
 

@@ -1,10 +1,9 @@
-import InputField from "../../Input/InputField";
-import { FastField } from "formik";
 import { Input, Button } from "antd";
+import React from "react";
 
 const PageTitle = () => {
   return (
-    <>
+    <div style={{ height: "545px" }} className="flex flex-col justify-between">
       <div className="flex flex-col">
         <label className="font-medium">Title of search page</label>
         <Input style={{ width: "50%" }} />
@@ -17,7 +16,7 @@ const PageTitle = () => {
           Save
         </Button>
       </div>
-    </>
+    </div>
   );
 };
 export default PageTitle;

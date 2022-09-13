@@ -1,4 +1,6 @@
 import { Modal, Col, Row, Divider, Radio, Space, Form, Button } from "antd";
+import React from "react";
+
 import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
 import * as Yup from "yup";
 import { FastField, useFormik, FormikProvider } from "formik";
@@ -6,10 +8,18 @@ import { useState } from "react";
 import InputField from "../Input/InputField";
 
 const validateUserForm = Yup.object().shape({
-  name: Yup.string().trim().required("Please input your Name"),
-  staffId: Yup.string().trim().required("Please input your ID"),
-  maxUser: Yup.number().required("Required").nullable(),
-  session: Yup.number().required("Required").nullable(),
+  name: Yup.string()
+    .trim()
+    .required("Please input your Name"),
+  staffId: Yup.string()
+    .trim()
+    .required("Please input your ID"),
+  maxUser: Yup.number()
+    .required("Required")
+    .nullable(),
+  session: Yup.number()
+    .required("Required")
+    .nullable(),
   ipnumber: Yup.array().when(["."], (ipnumber) => {
     return Yup.array().of(
       Yup.string()

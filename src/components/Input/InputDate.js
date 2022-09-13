@@ -1,6 +1,7 @@
 import { ErrorMessage } from "formik";
 //import { FormGroup } from "reactstrap";
 import moment from "moment";
+import React from "react";
 
 import { Input, DatePicker } from "antd";
 const InputDate = (props) => {
@@ -9,7 +10,7 @@ const InputDate = (props) => {
   // const { errors, touched } = form;
   // const showError = errors[name] && touched[name];
   const dateFormat = "DD/MM/YYYY";
-  console.log(value);
+  //  console.log(value);
   return (
     //   {label && <label for={name}>{label}</label>}
     <>

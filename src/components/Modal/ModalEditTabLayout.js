@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import React from "react";
+
 import { Modal, Col, Row, Card } from "antd";
 import { FaExchangeAlt } from "react-icons/fa";
 import { IoMdAdd, IoMdRemove } from "react-icons/io";
@@ -10,7 +12,10 @@ import InputField from "../Input/InputField";
 const validateBoxForm = Yup.object().shape({
   idbox: Yup.array().when(["."], (ipnumber) => {
     return Yup.array().of(
-      Yup.number().required("Required").min(0).max(12)
+      Yup.number()
+        .required("Required")
+        .min(0)
+        .max(12)
 
       // .test("unique", "IP Address is duplicated", (values) => {
       //   return new Set(ipnumber).size === ipnumber.length;

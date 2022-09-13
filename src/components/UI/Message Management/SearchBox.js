@@ -1,4 +1,6 @@
 import { Space, Table, Button } from "antd";
+import React from "react";
+
 import ModalDelete from "../../Modal/ModalDelete";
 import { MdDeleteOutline } from "react-icons/md";
 import AntSelect from "../../Select/AntSelect";

@@ -1,5 +1,7 @@
 import { Space, Table, Button, Divider } from "antd";
 import { FaRegEdit, FaTrashAlt } from "react-icons/fa";
+import React from "react";
+
 import ModalEditTabLayout from "../../Modal/ModalEditTabLayout";
 const columns = [
   {

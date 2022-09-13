@@ -8,13 +8,14 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import RegisterAnt from "./components/Register/RegisterAnt";
 import Login from "./components/Login/Login";
 import { Provider } from "react-redux";
-import store from "./store/index";
+import store from "./redux/store";
 import LayoutUserGroup from "./components/UI/User Group Management/LayoutUserGroup";
 import LayoutAdmin from "./components/UI/User Management/LayoutAdmin";
 import LayoutMessage from "./components/UI/Message Management/LayoutMessage";
 import PageTitle from "./components/UI/Message Management/PageTitle";
 import SearchBox from "./components/UI/Message Management/SearchBox";
 import LayoutSubMessage from "./components/UI/Message Management/LayoutSubMessage";
+import LayoutAPI from "./components/UI/Layout/LayoutAPI";
 
 ReactDOM.render(
   <Provider store={store}>
@@ -25,6 +26,7 @@ ReactDOM.render(
             <Route path="/userGroup" element={<LayoutUserGroup />} />
             <Route path="/manageUser" element={<LayoutAdmin />} />
             <Route path="/manageMessage" element={<LayoutMessage />} />
+            <Route path="/API" element={<LayoutAPI />} />
             <Route path="/pageTitle" element={<PageTitle />} />
             <Route path="/searchBox" element={<SearchBox />} />
             <Route path="/layout" element={<LayoutSubMessage />} />

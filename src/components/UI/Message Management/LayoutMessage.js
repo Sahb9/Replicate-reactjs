@@ -1,10 +1,10 @@
-import { Layout, Menu, Tabs } from "antd";
-import { Link, Outlet } from "react-router-dom";
+import { Layout, Tabs } from "antd";
+import React from "react";
+
 import PageTitle from "./PageTitle";
 import SearchBox from "./SearchBox";
 import LayoutSubMessage from "./LayoutSubMessage";
-const { Header } = Layout;
-const { Content } = Layout;
+
 const { TabPane } = Tabs;
 const LayoutMessage = () => {
   return (

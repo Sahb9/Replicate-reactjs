@@ -1,4 +1,6 @@
 import { Modal, Col, Row } from "antd";
+import React from "react";
+
 import * as Yup from "yup";
 
 import { FastField, useFormik, FormikProvider } from "formik";
@@ -6,8 +8,12 @@ import InputField from "../Input/InputField";
 import AntSelectField from "../Select/AntSelectField";
 import AntSelectOperation from "../Select/AntSelectOperation";
 const validateUserForm = Yup.object().shape({
-  label: Yup.string().trim().required("Please input your Label"),
-  match: Yup.string().trim().required("Please input your match"),
+  label: Yup.string()
+    .trim()
+    .required("Please input your Label"),
+  match: Yup.string()
+    .trim()
+    .required("Please input your match"),
 });
 const ModalSearchBox = (props) => {
   const handleOk = () => {

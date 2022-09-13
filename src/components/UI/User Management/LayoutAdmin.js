@@ -1,16 +1,16 @@
 import { AiOutlineUserAdd } from "react-icons/ai";
 import { BiSearchAlt2 } from "react-icons/bi";
-import { BiUserCircle } from "react-icons/bi";
+//import { BiUserCircle } from "react-icons/bi";
 import { MdDeleteOutline } from "react-icons/md";
 import ModalDelete from "../../Modal/ModalDelete";
 import { useState } from "react";
 
-import { BsCircle } from "react-icons/bs";
-import { Layout, Menu, Button, Input, Space, Table } from "antd";
+//import { BsCircle } from "react-icons/bs";
+import { Layout, Button, Input, Space, Table } from "antd";
 import React from "react";
 import AntSelect from "../../Select/AntSelect";
 import ModalAdd from "../../Modal/ModalAdd";
-const { Header, Sider, Content } = Layout;
+const { Content } = Layout;
 const Items = [
   {
     label: "Files Management",

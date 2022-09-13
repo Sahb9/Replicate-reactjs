@@ -1,4 +1,6 @@
 import { Modal } from "antd";
+import React from "react";
+
 import { ExclamationCircleOutlined } from "@ant-design/icons";
 const { confirm } = Modal;
 const showDeleteConfirm = (name) => {

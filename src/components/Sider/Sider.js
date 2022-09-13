@@ -1,4 +1,6 @@
 import { Menu, Layout } from "antd";
+import React from "react";
+
 import { Link } from "react-router-dom";
 import "./Sider.css";
 const Sider = () => {
@@ -14,7 +16,10 @@ const Sider = () => {
         <Menu.Item key="3">
           <Link to="/manageMessage">Message Management</Link>
         </Menu.Item>
-        <Menu.Item key="4">Others</Menu.Item>
+        <Menu.Item key="4">
+          <Link to="/API">API</Link>
+        </Menu.Item>
+        <Menu.Item key="5">Others</Menu.Item>
       </Menu>
     </Layout.Sider>
   );

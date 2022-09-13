@@ -2,6 +2,7 @@ import React from "react";
 import { Layout, Col, Row, Button } from "antd";
 import { PageHeader } from "antd";
 import { BiUserCircle } from "react-icons/bi";
+import React from "react";
 
 import { BsCircle } from "react-icons/bs";
 import ContentService from "../ContentService";
