@@ -9,7 +9,7 @@ import { Layout } from "antd";
 import Sider from "./components/Sider/Sider";
 import EventComponent from "./Test API Event/EventComponent";
 import GoogleLoginButton from "./Test API Event/LoginGoogle";
-
+import TestReactQuery from "./components/Test React Query/TestReactQuery";
 const { Content } = Layout;
 function App() {
   return (
@@ -23,9 +23,8 @@ function App() {
           </Content>
         </Layout>
       </Layout>
-      {/* <test></test> */}
-      {/* <EventComponent></EventComponent> */}
-      {/* <GoogleLoginButton /> */}
+
+      {/* <TestReactQuery></TestReactQuery> */}
     </>
   );
 }

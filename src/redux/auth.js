@@ -19,9 +19,9 @@ const authSlice = createSlice({
       localStorage.setItem("x-access-token", action.payload.access_token);
     },
     getInforUser(state, action) {
-      console.log(action);
+      //console.log(action);
       state.userData = action.payload;
-      console.log(state.userData);
+      //console.log(state.userData);
     },
     logout(state) {
       state.loginStatus = false;

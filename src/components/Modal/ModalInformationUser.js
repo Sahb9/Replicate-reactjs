@@ -1,8 +1,9 @@
-import { Button, Modal, Tabs } from "antd";
-import React, { useState } from "react";
+import { Modal, Tabs } from "antd";
+import React from "react";
 import ContentGroup from "../UI/Layout/ContentGroup";
 
 import UserInfor from "../UI/Layout/UserInfor";
+import UserInforReactQuery from "../UI/Layout/UserInforReactQuery";
 const { TabPane } = Tabs;
 const ModalInformationUser = (props) => {
   const handleOk = () => {
@@ -27,7 +28,8 @@ const ModalInformationUser = (props) => {
       >
         <Tabs defaultActiveKey="1" style={{ marginLeft: "20px" }}>
           <TabPane tab="User Information" key="1">
-            <UserInfor />
+            <UserInforReactQuery />
+            {/* <UserInfor /> */}
           </TabPane>
           <TabPane tab="Content group" key="2">
             <ContentGroup />

@@ -4,9 +4,6 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import React from "react";
 
-let test1 = 1;
-let test2 = 1;
-
 const UserInfor = () => {
   const dispatch = useDispatch();
 
@@ -14,7 +11,9 @@ const UserInfor = () => {
     getDataUser()
       .then((result) => {
         console.log(result);
-        //   console.log("thanh cong");
+
+        console.log(result.response.data.json());
+        console.log("thanh cong");
         dispatch(authActions.getInforUser(result.response.data));
       })
       .catch((result) => {

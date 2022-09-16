@@ -11,28 +11,28 @@ import React from "react";
 import AntSelect from "../../Select/AntSelect";
 import ModalAdd from "../../Modal/ModalAdd";
 const { Content } = Layout;
-const Items = [
-  {
-    label: "Files Management",
-    to: "/files",
-  },
-  {
-    label: "User Group Management",
-    to: "/group",
-  },
-  {
-    label: "Users Management",
-    to: "/users",
-  },
-  {
-    label: "Messages Management",
-    to: "/messages",
-  },
-  {
-    label: "Dashboard",
-    to: "/home",
-  },
-];
+// const Items = [
+//   {
+//     label: "Files Management",
+//     to: "/files",
+//   },
+//   {
+//     label: "User Group Management",
+//     to: "/group",
+//   },
+//   {
+//     label: "Users Management",
+//     to: "/users",
+//   },
+//   {
+//     label: "Messages Management",
+//     to: "/messages",
+//   },
+//   {
+//     label: "Dashboard",
+//     to: "/home",
+//   },
+// ];
 const columns = [
   {
     title: "Title",

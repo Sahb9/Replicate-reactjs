@@ -1,4 +1,4 @@
-import { Layout, Tabs } from "antd";
+import { Tabs } from "antd";
 import React from "react";
 
 import PageTitle from "./PageTitle";
