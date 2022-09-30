@@ -10,6 +10,7 @@ import Sider from "./components/Sider/Sider";
 import EventComponent from "./Test API Event/EventComponent";
 import GoogleLoginButton from "./Test API Event/LoginGoogle";
 import TestReactQuery from "./components/Test React Query/TestReactQuery";
+import TestLazyLoading from "./Test API Event/TestLazyLoading";
 const { Content } = Layout;
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
           </Content>
         </Layout>
       </Layout>
-
+      {/* <TestLazyLoading></TestLazyLoading> */}
       {/* <TestReactQuery></TestReactQuery> */}
     </>
   );

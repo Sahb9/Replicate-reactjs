@@ -4,8 +4,6 @@ import { getListOfContent } from "../../../redux/auth";
 import { StepBackwardFilled, StepForwardFilled } from "@ant-design/icons";
 import { useState, useEffect } from "react";
 const ListOfMainContent = (props) => {
-  // const [onBack, setBack] = useState(false);
-  // const [onNext, setNext] = useState(true);
   const [perPage, setPage] = useState(1);
   const [arrayItems, setArrayItems] = useState([{}]);
   const [contentPerPage, setPerContent] = useState([]);
@@ -22,18 +20,16 @@ const ListOfMainContent = (props) => {
   }, [arrayItems]);
   async function handleData() {
     let tempArr = [];
-    //for (const key in dataContent) {
+
     const result = await fetchDataListContentFunction({
-      id: indexContent, //dataContent[key].id,
+      id: indexContent,
       perPage: perPage,
     });
-    // console.log(
-    //   "id of datacontent" + dataContent[key].id + " id index " + indexContent
-    // );
+
     tempArr = [
       ...tempArr,
       {
-        id: indexContent, //dataContent[key].id,
+        id: indexContent,
         content: result.response.data.content,
         total_pages: result.response.data.total_pages,
       },
@@ -44,7 +40,6 @@ const ListOfMainContent = (props) => {
   async function handleAllData() {
     const result = await handleData();
     console.log(result);
-
     setArrayItems(result);
   }
 
