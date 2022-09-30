@@ -129,5 +129,46 @@ export const getDetailOfContent = async (params) => {
   //     "&domain=urss1.689cloud.com&page=1&size=4"
   // );
 };
+export const getContentGroup = async () => {
+  try {
+    const response = await httpRequest({
+      url: "/content-group/public/list",
+      method: "GET",
+      params: {
+        domain: "bear.localhost",
+      },
+    });
+    return { response };
+  } catch (err) {
+    const error =
+      err.response && err.response.data.message
+        ? err.response.data.message
+        : err.message;
+    return error;
+  }
+};
+export const getListOfContent = async (params) => {
+  const { id, perPage } = params;
+
+  try {
+    const response = await httpRequest({
+      url: "/content/public/page",
+      method: "GET",
+      params: {
+        content_group_id: id,
+        domain: "bear.localhost",
+        page: perPage,
+        size: 3,
+      },
+    });
+    return { response };
+  } catch (err) {
+    const error =
+      err.response && err.response.data.message
+        ? err.response.data.message
+        : err.message;
+    return error;
+  }
+};
 export const authActions = authSlice.actions;
 export default authSlice.reducer;

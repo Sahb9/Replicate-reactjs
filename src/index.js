@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import "antd/dist/antd.min.css";
-import App from "./App";
+import App from "./App.jsx";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import RegisterAnt from "./components/Register/RegisterAnt";
@@ -16,6 +16,7 @@ import PageTitle from "./components/UI/Message Management/PageTitle";
 import SearchBox from "./components/UI/Message Management/SearchBox";
 import LayoutSubMessage from "./components/UI/Message Management/LayoutSubMessage";
 import LayoutAPI from "./components/UI/Layout/LayoutAPI";
+import LayoutContentGroup from "./components/UI/Layout/LayoutContentGroup";
 
 ReactDOM.render(
   <Provider store={store}>
@@ -27,6 +28,7 @@ ReactDOM.render(
             <Route path="/manageUser" element={<LayoutAdmin />} />
             <Route path="/manageMessage" element={<LayoutMessage />} />
             <Route path="/API" element={<LayoutAPI />} />
+            <Route path="/contentGroup" element={<LayoutContentGroup />} />
             <Route path="/pageTitle" element={<PageTitle />} />
             <Route path="/searchBox" element={<SearchBox />} />
             <Route path="/layout" element={<LayoutSubMessage />} />

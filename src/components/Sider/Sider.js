@@ -19,7 +19,10 @@ const Sider = () => {
         <Menu.Item key="4">
           <Link to="/API">API</Link>
         </Menu.Item>
-        <Menu.Item key="5">Others</Menu.Item>
+        <Menu.Item key="5">
+          <Link to="/contentGroup">Content Group</Link>
+        </Menu.Item>
+        <Menu.Item key="6">Others</Menu.Item>
       </Menu>
     </Layout.Sider>
   );
